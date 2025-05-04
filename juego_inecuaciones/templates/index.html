@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>🎮 Desafío de Inecuaciones</title>
+    <style>
+        :root {
+            --principal: #00BCD4;
+            --secundario: #4CAF50;
+            --acento: #FF9800;
+            --texto: #333;
+            --fondo: #e3f2fd;
+            --blanco: #fff;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: var(--fondo);
+            margin: 0;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            background: var(--blanco);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: var(--principal);
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-top: 25px;
+            padding: 20px;
+            border-left: 6px solid var(--secundario);
+            border-radius: 12px;
+            background-color: #fefefe;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: var(--secundario);
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: var(--acento);
+            margin-bottom: 6px;
+        }
+
+        p, li {
+            font-size: 17px;
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .highlight {
+            color: var(--principal);
+            font-weight: bold;
+        }
+
+        .emoji {
+            font-size: 20px;
+            margin-right: 6px;
+        }
+
+        .button-start {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: var(--acento);
+            color: var(--blanco);
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button-start:hover {
+            background-color: #fb8c00;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>🧠 Desafío del Laberinto de Inecuaciones</h1>
+        <p style="font-size:18px;">¡Aprende y juega resolviendo desafíos matemáticos!</p>
+
+        <div class="section">
+            <h2>📌 ¿Qué es una inecuación?</h2>
+            <p><span class="emoji">📐</span>Una <strong>inecuación</strong> es una desigualdad matemática con símbolos como <, >, ≤ o ≥.</p>
+            <p>Ejemplo: <span class="highlight">x + 2 ≤ 7</span></p>
+        </div>
+
+        <div class="section">
+            <h2>📖 Reglas Básicas</h2>
+            <ul>
+                <li><span class="emoji">➕</span><strong>Adición:</strong> Si a &lt; b, entonces a + k &lt; b + k.</li>
+                <li><span class="emoji">✖️</span><strong>Multiplicación:</strong> Si multiplicas por negativo, ¡invierte el signo!</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🧮 Ejemplos Resueltos</h2>
+            <h3>Ejemplo 1:</h3>
+            <p>2x - 5 &lt; 9 → <span class="highlight">x &lt; 7</span></p>
+
+            <h3>Ejemplo 2:</h3>
+            <p>−3x + 2 ≥ 8 → <span class="highlight">x ≤ -2</span></p>
+        </div>
+
+        <div class="section">
+            <h2>⚖️ Caso Real</h2>
+            <p><span class="emoji">💰</span>¿Qué plan de pago conviene?</p>
+            <p>Plan A: $250 + $10/h | Plan B: $20/h</p>
+            <p>Resolver: <span class="highlight">20n &gt; 250 + 10n → n &gt; 25</span></p>
+        </div>
+
+        <div class="section">
+            <h2>📊 Representación Visual</h2>
+            <p>Para <span class="highlight">x &gt; 4</span>, se dibuja un círculo abierto en 4 y una flecha hacia la derecha ➡️.</p>
+        </div>
+
+        <a class="button-start" href="{{ url_for('juego') }}">🎯 ¡Iniciar el Desafío!</a>
+    </div>
+</body>
+</html>
+

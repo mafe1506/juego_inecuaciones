@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>🌟 Fin del Desafío 🌟</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("{{ url_for('static', filename='img/fondo_laberinto_pixel.png') }}");
+            background-size: cover;
+            font-family: 'Press Start 2P', cursive;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 700px;
+            box-shadow: 0 0 20px #00ffcc;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background-image: url("{{ url_for('static', filename='img/avatar.gif') }}");
+            background-size: cover;
+            margin: 20px auto;
+            animation: moveAvatar 2s infinite alternate;
+        }
+
+        @keyframes moveAvatar {
+            0% { transform: translateX(-10px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateX(10px); }
+        }
+
+        .mensaje {
+            font-size: 18px;
+            color: #ffff66;
+            margin: 20px 0;
+        }
+
+        .boton-inicio {
+            margin-top: 20px;
+            background-color: #ffcc00;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .boton-inicio:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Avatar que se mueve -->
+        <div class="avatar"></div>
+
+        <!-- Mensaje de fin de juego -->
+        <h1>¡Felicidades, has completado el desafío!</h1>
+        <p class="mensaje">🎉 ¡Excelente trabajo! Has resuelto todas las inecuaciones y has llegado al final del laberinto. 🎉</p>
+
+        <!-- Botón para volver al inicio -->
+        <a class="boton-inicio" href="{{ url_for('index') }}">➡ Volver al inicio</a>
+    </div>
+</body>
+</html>
